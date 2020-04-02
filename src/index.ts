@@ -12,10 +12,15 @@ export interface FastDevToolOptions{
   fetchErrorHandle: (e: Error) => void;
 }
 
-export function install (Vue:any, options:FastDevToolOptions){
+
+function install (Vue:any, options:FastDevToolOptions){
   Vue.prototype.$rule = rule;
   Vue.prototype.$dict = new Dict();
   if(options.fetchErrorHandle){
     config.fetchErrorHandle = options.fetchErrorHandle;
   }
+}
+
+export default {
+  install
 }
