@@ -45,7 +45,7 @@ export class Dict {
   getDict(dictName: string): IDict[] {
     const dict = this.dictMap.get(dictName);
     if (dict === undefined) {
-      throw new Error("词典不存在");
+      throw new Error(`词典${dictName}不存在`);
     } else {
       return dict;
     }
