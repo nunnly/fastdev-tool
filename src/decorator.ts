@@ -1,4 +1,4 @@
-import config from './config';
+import {config} from './config';
 
 /**
  * @description 主要用于数据请求, 封装之后,

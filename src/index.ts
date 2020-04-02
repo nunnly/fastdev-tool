@@ -1,6 +1,6 @@
 
-export * from './config';
-export * from './decorator';
+export {config} from './config';
+export {Fetch} from './decorator';
 
-export * from './Dict';
-export * from './FormRule';
+export {Dict} from './Dict';
+export {rule, FormRule} from './FormRule';
