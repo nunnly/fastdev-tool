@@ -1,0 +1,19 @@
+{
+  "name": "fastdev-tool",
+  "version": "0.0.4",
+  "description": "",
+  "main": "lib/fastdev-tool.umd.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json &&  rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hawk <whktk@qq.com> (http://www.hawkk.cn)",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^2.3.2",
+    "typescript": "^3.8.3"
+  }
+}
