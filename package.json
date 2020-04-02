@@ -1,6 +1,6 @@
 {
   "name": "fastdev-tool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "lib/fastdev-tool.umd.js",
   "types": "lib/index.d.ts",
