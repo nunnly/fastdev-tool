@@ -33,7 +33,7 @@ export interface AOption {
 }
 
 
-interface IDict {
+export interface IDict {
   key: string;
   value: string;
   code?: string;
