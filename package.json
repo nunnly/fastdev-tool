@@ -1,8 +1,12 @@
 {
   "name": "fastdev-tool",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "lib/fastdev-tool.umd.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nunnly/fastdev-tool"
+  },
   "types": "lib/index.d.ts",
   "module": "lib/index.js",
   "scripts": {

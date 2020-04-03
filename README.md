@@ -62,6 +62,17 @@ async loadData(){
 // 配合ant-design-vue使用
 <ASelect :options="$dict.getSelectOptions('词典名称')" />
 
+$dict.getDictText('词典名称', '词典的key') => 返回词典的title
+
+$dict.addDict('词典名称', [{
+    key: '1',
+    title: '词典的标签',
+    value: '词典的值'// 如果不传入,在返回 select options的时候会返回key值
+}], force)// 最后一个参数 boolean 如果为 true 可以覆盖词典
+
+
+
+
 
 ```
 
