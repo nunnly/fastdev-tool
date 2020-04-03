@@ -23,9 +23,11 @@ function install (Vue:any, options:FastDevToolOptions){
   if(options.fetchErrorHandle){
     config.fetchErrorHandle = options.fetchErrorHandle;
   }
-  if(options.dict){
-    Object.entries((key:string, value:IDict[])=> {
-      dict.addDict(key, value)
+  const dicts = options.dict;
+  if(dicts){
+    Object.keys(dicts).forEach(key=> {
+        // @ts-ignore
+      dict.addDict(key, dicts[key])
     })
   }
 }
