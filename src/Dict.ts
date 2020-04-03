@@ -35,8 +35,8 @@ export interface AOption {
 
 export interface IDict {
   key: string;
-  value: string;
-  code?: string;
+  title: string;
+  value?: string | number;
   [key: string]: any;
 }
 
@@ -64,9 +64,9 @@ export class Dict {
   getSelectOptions(dictName: string): AOption[] {
     return this.getDict(dictName).map(v => {
       return {
-        title: v.key,
-        value: v.value,
-        key: v.key
+        title: v.title,
+        key: v.key,
+        value: v.value || v.key
       };
     });
   }
@@ -74,7 +74,7 @@ export class Dict {
   getDictText(dictName: string, key: string | number): string {
     const dict = this.getDict(dictName).find(v => v.key === key);
     if (dict) {
-      return dict.value;
+      return dict.title;
     } else {
       // console.warn(`找不到词典 ${dictName}, key: ${key}`);
       return "";

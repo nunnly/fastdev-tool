@@ -65,6 +65,32 @@ async loadData(){
 ### FormRule
 
 ```javascript
+<AFormItem label="用户名">
+    <AInput
+      v-decorator="[
+        'userName',
+        {
+          rules: $rule('用户名')
+            .required()
+            .max(10)
+        }
+      ]"
+    />
+</AFormItem>
+
+//或者
+rules: {
+  userName: this.$rule('用户名').required().max().min().len().eumn([1,2,3])
+}
+
+//由于$rule('用户名')返回的是一个FormRule实例, 这个实例是继承自Array的
+//所以你可以自由的使用Array的方法, 注意push这类的方法返回的不是this, 所以不能直接使用
+// 你也可以自己往FormRule的原型上面添加方法
+this.$rule('标签名称').required().concat({
+  validator(rule, value, callback){
+      // do something
+  }
+})
 
 
 ```
@@ -82,3 +108,6 @@ config.fetchErrorHandle = function(e){
 }
 
 ```
+
+### todoList
+ [ ] rule 自定义消息体
