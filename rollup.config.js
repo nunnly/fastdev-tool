@@ -1,4 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
 export default {
   input: './lib/index.js',
@@ -11,5 +12,6 @@ export default {
   external: ['vue', 'vue-class-component', 'ant-design-vue'],
   plugins:[
       resolve(),
+      commonjs()
   ]
 }
