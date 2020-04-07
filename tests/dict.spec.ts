@@ -38,6 +38,7 @@ test('getSelectOptions', () => {
 })
 test('getDictText', () => {
   dict.addDict('text', [{title: '文本', key: '2'}]);
+  expect(dict.getDictText('text', '2324')).toBe('')
   expect(dict.getDictText('text', '2')).toBe('文本')
 })
 
