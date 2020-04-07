@@ -10,14 +10,21 @@
   "types": "lib/index.d.ts",
   "module": "lib/index.js",
   "scripts": {
-    "build": "tsc -p ./tsconfig.json &&  rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p ./src/tsconfig.json &&  rollup -c",
+    "test": "jest",
+    "test:cover": "jest --coverage"
   },
   "author": "hawk <whktk@qq.com> (http://www.hawkk.cn)",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
     "@rollup/plugin-node-resolve": "^7.1.1",
+    "@types/jest": "^25.2.1",
+    "jest": "^25.2.7",
     "rollup": "^2.3.2",
+    "ts-jest": "^25.3.1",
+    "tslib": "^1.11.1",
     "typescript": "^3.8.3"
   }
 }

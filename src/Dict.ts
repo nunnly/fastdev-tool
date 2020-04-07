@@ -41,6 +41,11 @@ export interface IDict {
 }
 
 export class Dict {
+  constructor(dictMap: { [key:string]: IDict[] } = {}) {
+    Object.keys(dictMap).forEach((v: string) => {
+      this.dictMap.set(v, dictMap[v]);
+    });
+  }
   dictMap: Map<string, IDict[]> = new Map();
   getDict(dictName: string): IDict[] {
     const dict = this.dictMap.get(dictName);
@@ -81,3 +86,5 @@ export class Dict {
     }
   }
 }
+
+export default Dict;
